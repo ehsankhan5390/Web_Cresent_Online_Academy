@@ -3,8 +3,8 @@ title: Web Cresent Online Academy
 emoji: 📖
 colorFrom: green
 colorTo: blue
-sdk: gradio
-sdk_version: 4.44.0
+sdk: python
+sdk_version: 3.10
 app_file: app.py
 pinned: false
 ---
