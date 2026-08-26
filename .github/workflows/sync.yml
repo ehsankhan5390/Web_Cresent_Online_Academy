@@ -1,0 +1,22 @@
+name: Sync to Hugging Face Space
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git remote add hf https://ehsankhan5390:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/ehsankhan5390/Web_Cresent_Online_Academy
+          git push --force hf main
