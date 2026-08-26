@@ -1,11 +1,17 @@
 import gradio as gr
 from controller import app as fastapi_app
+import spaces
 
-# Create a Gradio interface shell
+# ZeroGPU کو مطمئن رکھنے کے لیے ڈمی جی پی یو فنکشن
+@spaces.GPU
+def check_gpu():
+    return "GPU Active"
+
+# Gradio Interface
 with gr.Blocks() as demo:
-    gr.Markdown("# Web Crescent Online Academy Running...")
+    gr.Markdown("# Web Crescent Online Academy")
 
-# Mount FastAPI inside Gradio
+# FastAPI App کو Gradio پر ماؤنٹ کرنا
 app = gr.mount_gradio_app(fastapi_app, demo, path="/")
 
 if __name__ == "__main__":

@@ -4,3 +4,4 @@ jinja2
 python-multipart
 gradio==4.44.0
 huggingface_hub<0.25.0
+spaces
