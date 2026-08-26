@@ -1,0 +1,13 @@
+---
+title: Web Cresent Online Academy
+emoji: 📖
+colorFrom: green
+colorTo: blue
+sdk: gradio
+sdk_version: 4.19.0
+app_file: app.py
+pinned: false
+---
+
+# Web Crescent Online Academy
+Online Quran & Islamic Education Platform
