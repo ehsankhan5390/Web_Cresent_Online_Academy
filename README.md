@@ -3,8 +3,7 @@ title: Web Cresent Online Academy
 emoji: 📖
 colorFrom: green
 colorTo: blue
-sdk: static
-app_file: app.py
+sdk: docker
 pinned: false
 ---
 
