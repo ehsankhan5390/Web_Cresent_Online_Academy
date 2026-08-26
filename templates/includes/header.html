@@ -19,10 +19,10 @@
         <!-- Background Images Slider Track -->
         <div class="hero-slider-track" id="heroSliderTrack">
             <div class="hero-slide-item">
-                <img src="/static/header/img1.jpg" alt="Hero Slide 1" onerror="tryAlternativeFormats(this, '/static/header/img1', ['png', 'jpeg', 'webp']);">
+                <img src="/static/header/header/img1.jpeg" alt="Hero Slide 1" onerror="tryAlternativeFormats(this, '/static/header/header/img1', ['jpg', 'png', 'webp']);">
             </div>
             <div class="hero-slide-item">
-                <img src="/static/header/img2.jpg" alt="Hero Slide 2" onerror="tryAlternativeFormats(this, '/static/header/img2', ['png', 'jpeg', 'webp']);">
+                <img src="/static/header/header/img2.jpeg" alt="Hero Slide 2" onerror="tryAlternativeFormats(this, '/static/header/header/img2', ['jpg', 'png', 'webp']);">
             </div>
         </div>
 
@@ -35,7 +35,7 @@
             <div class="logo-text-wrapper">
                 <!-- Large Logo Image -->
                 <div class="logo-box">
-                    <img id="siteLogo" src="/static/header/logo.png" alt="Crescent Online Academy" class="hero-logo-large" onerror="tryAlternativeFormats(this, '/static/header/logo', ['jpg', 'jpeg', 'webp']);">
+                    <img id="siteLogo" src="/static/header/header/logo.png" alt="Crescent Online Academy" class="hero-logo-large" onerror="tryAlternativeFormats(this, '/static/header/header/logo', ['jpg', 'jpeg', 'webp']);">
                 </div>
                 
                 <!-- Premium Typography Branding Text -->
@@ -238,7 +238,7 @@
         // Auto Discover Extra Images (img3, img4, img5, etc.)
         const maxCheck = 20;
         for (let i = 3; i <= maxCheck; i++) {
-            const imgPath = `/static/header/img${i}.jpg`;
+            const imgPath = `/static/header/header/img${i}.jpeg`;
             const tempImg = new Image();
             tempImg.src = imgPath;
             tempImg.onload = function() {
@@ -248,7 +248,7 @@
                 imgTag.src = imgPath;
                 imgTag.alt = `Hero Slide ${i}`;
                 imgTag.onerror = function() {
-                    tryAlternativeFormats(this, `/static/header/img${i}`, ['png', 'jpeg', 'webp']);
+                    tryAlternativeFormats(this, `/static/header/header/img${i}`, ['jpg', 'png', 'webp']);
                 };
                 slideDiv.appendChild(imgTag);
                 track.appendChild(slideDiv);
