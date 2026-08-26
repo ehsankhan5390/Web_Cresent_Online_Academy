@@ -1,49 +1,22 @@
-{% extends "controller.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescent Online Academy</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
 
-{% block content %}
+    <!-- Header Single Include -->
+    {% include 'includes/header.html' %}
 
-<!-- 🎯 1. Hero Section -->
-<section style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 80px 20px; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 40px;">
-    <div class="container">
-        <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 15px;">Learn Quran Online With Qualified Teachers</h1>
-        <p style="font-size: 18px; color: #cbd5e1; max-width: 700px; margin: 0 auto 30px auto;">Personalized 1-to-1 classes for kids and adults, designed to help you read and recite the Quran with confidence.</p>
-        
-        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-            <a href="https://wa.me/447532781840" target="_blank" style="background: #10b981; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                Start Free Trial
-            </a>
-            <a href="#courses" style="background: transparent; border: 2px solid #10b981; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 16px;">
-                View Courses
-            </a>
-        </div>
-    </div>
-</section>
+    <!-- Main Content Area -->
+    <main class="main-body">
+    </main>
 
-<!-- 🎯 2. Dynamic Courses Section -->
-<section id="courses" style="padding: 40px 0;">
-    <div class="container">
-        <div style="text-align: center; margin-bottom: 40px;">
-            <h2 style="font-size: 32px; color: #0f172a; font-weight: 700;">Our Popular Courses</h2>
-            <p style="color: #64748b; font-size: 16px;">Explore our Quranic and Islamic education programs</p>
-        </div>
+    <!-- Footer Single Include -->
+    {% include 'includes/footer.html' %}
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            {% if courses %}
-                {% for course in courses %}
-                    <div style="background: white; border-radius: 12px; border: 1px solid #e2e8f0; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-                        <i class="{{ course.icon if course.icon else 'fas fa-book-quran' }}" style="font-size: 40px; color: #10b981; margin-bottom: 15px;"></i>
-                        <h3 style="font-size: 20px; color: #0f172a; margin-bottom: 10px;">{{ course.title }}</h3>
-                        <p style="color: #64748b; font-size: 14px; margin-bottom: 20px; line-height: 1.5;">{{ course.description }}</p>
-                        <a href="https://wa.me/447532781840" target="_blank" style="background: #0284c7; color: white; padding: 8px 20px; border-radius: 6px; text-decoration: none; font-size: 14px; font-weight: 500;">Enroll Now</a>
-                    </div>
-                {% endfor %}
-            {% else %}
-                <div style="grid-column: 1/-1; text-align: center; color: #64748b; padding: 20px;">
-                    <p>No courses folder found yet. Add courses in the <b>/courses</b> directory.</p>
-                </div>
-            {% endif %}
-        </div>
-    </div>
-</section>
-
-{% endblock %}
+</body>
+</html>

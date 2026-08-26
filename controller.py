@@ -9,14 +9,11 @@ import uvicorn
 
 app = FastAPI()
 
-# 📂 Static اور Templates ڈائریکٹریز سیٹ کرنا
+# 📂 Static ڈائریکٹری
 os.makedirs("static", exist_ok=True)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-templates = Jinja2Templates(directory=[
-    "templates",
-    "templates/includes"
-])
+templates = Jinja2Templates(directory="templates")
 
 # 🛠️ ڈائنامک کورسز اسکین کرنے کا فنکشن
 def get_dynamic_courses():

@@ -1,40 +1,274 @@
-<header style="background: #0f172a; border-bottom: 3px solid #10b981; position: sticky; top: 0; z-index: 1000;">
-    <!-- Top Bar -->
-    <div style="background: #0284c7; color: white; padding: 6px 0; font-size: 13px; text-align: center;">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <span><i class="fas fa-globe"></i> Online Quran Classes Worldwide for Kids & Adults</span>
-            <div>
-                <a href="https://wa.me/447532781840" style="color: white; text-decoration: none; margin-left: 15px;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+<!-- Google Fonts Import for Premium Branding & Top Bar Typography -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<header class="site-header">
+    
+    <!-- Top Branding & Tagline Bar -->
+    <div class="top-tagline-bar">
+        <div class="header-container tagline-content">
+            <span class="trust-badge">⭐ A Symbol of Trust & Academic Excellence</span>
+            <span class="tagline-text">Empowering Global Minds Across USA, UK, Europe, Canada & Australia</span>
+        </div>
+    </div>
+
+    <!-- Hero Banner Slider Section (+30% Larger Height & Dynamic Auto-Discovery Slider) -->
+    <div class="hero-slider-container">
+        
+        <!-- Background Images Slider Track -->
+        <div class="hero-slider-track" id="heroSliderTrack">
+            <div class="hero-slide-item">
+                <img src="/static/header/img1.jpg" alt="Hero Slide 1" onerror="tryAlternativeFormats(this, '/static/header/img1', ['png', 'jpeg', 'webp']);">
+            </div>
+            <div class="hero-slide-item">
+                <img src="/static/header/img2.jpg" alt="Hero Slide 2" onerror="tryAlternativeFormats(this, '/static/header/img2', ['png', 'jpeg', 'webp']);">
             </div>
         </div>
-    </div>
 
-    <!-- Main Navigation -->
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
-        <div class="logo">
-            <a href="/" style="font-size: 24px; font-weight: 700; color: white; text-decoration: none; display: flex; align-items: center; gap: 10px;">
-                <i class="fas fa-quran" style="color: #10b981; font-size: 28px;"></i>
-                <span>Crescent <span style="color: #10b981;">Academy</span></span>
-            </a>
+        <!-- Dark Overlay over Images for Text Clarity -->
+        <div class="hero-overlay"></div>
+
+        <!-- Branding Content ON TOP of the Sliding Images -->
+        <div class="header-container hero-branding-overlay">
+            
+            <div class="logo-text-wrapper">
+                <!-- Large Logo Image -->
+                <div class="logo-box">
+                    <img id="siteLogo" src="/static/header/logo.png" alt="Crescent Online Academy" class="hero-logo-large" onerror="tryAlternativeFormats(this, '/static/header/logo', ['jpg', 'jpeg', 'webp']);">
+                </div>
+                
+                <!-- Premium Typography Branding Text -->
+                <div class="hero-brand-text">
+                    <h1 class="hero-main-title">CRESCENT ONLINE ACADEMY</h1>
+                    <p class="hero-subtitle">Educating with Integrity & Academic Excellence Worldwide</p>
+                </div>
+            </div>
+
         </div>
 
-        <nav>
-            <ul style="display: flex; list-style: none; gap: 25px; align-items: center; margin: 0;">
-                <li><a href="/" style="color: white; text-decoration: none; font-weight: 500; font-size: 15px;">Home</a></li>
-                
-                <!-- Dynamic Courses Dropdown -->
-                <li style="position: relative;" class="dropdown">
-                    <a href="#courses" style="color: white; text-decoration: none; font-weight: 500; font-size: 15px;">Courses <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
-                </li>
-                
-                <li><a href="#about" style="color: white; text-decoration: none; font-weight: 500; font-size: 15px;">About Us</a></li>
-                <li><a href="#contact" style="color: white; text-decoration: none; font-weight: 500; font-size: 15px;">Contact</a></li>
-                <li>
-                    <a href="https://wa.me/447532781840" target="_blank" style="background: #10b981; color: white; padding: 8px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s;">
-                        Start Free Trial
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
 </header>
+
+<style>
+    :root {
+        --brand-gold: #f59e0b;
+        --brand-green: #10b981;
+        --dark-navy: #0f172a;
+    }
+
+    .site-header {
+        width: 100%;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .header-container {
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Top Bar Styling - Updated Fonts & Premium Look */
+    .top-tagline-bar {
+        background: #0f172a;
+        color: #ffffff;
+        padding: 9px 0;
+        position: relative;
+        z-index: 20;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .tagline-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .trust-badge {
+        font-family: 'Poppins', sans-serif;
+        color: #fbbf24;
+        font-weight: 700;
+        font-size: 13.5px;
+        letter-spacing: 0.4px;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .tagline-text {
+        font-family: 'Inter', sans-serif;
+        color: #e2e8f0;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+    }
+
+    /* Hero Banner Slider Container (~410px Height) */
+    .hero-slider-container {
+        position: relative;
+        width: 100%;
+        height: 410px;
+        overflow: hidden;
+        border-bottom: 4px solid var(--brand-green);
+    }
+
+    .hero-slider-track {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-slide-item {
+        min-width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+    }
+
+    .hero-slide-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.85);
+    }
+
+    /* Gradient Overlay */
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.55) 60%, rgba(15, 23, 42, 0.2) 100%);
+        z-index: 5;
+    }
+
+    /* Overlay Branding Elements */
+    .hero-branding-overlay {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .logo-text-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .hero-logo-large {
+        height: 175px;
+        width: auto;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    }
+
+    .hero-brand-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-main-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 46px;
+        font-weight: 900;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-style: italic;
+        color: var(--brand-gold);
+        margin: 8px 0 0 0;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    @media (max-width: 900px) {
+        .hero-slider-container {
+            height: 280px;
+        }
+        .hero-main-title {
+            font-size: 30px;
+        }
+        .hero-logo-large {
+            height: 110px;
+        }
+        .hero-subtitle {
+            font-size: 16px;
+        }
+        .tagline-text {
+            font-size: 11px;
+        }
+        .trust-badge {
+            font-size: 11.5px;
+        }
+    }
+</style>
+
+<script>
+    // Multi-Extension Fallback Function
+    function tryAlternativeFormats(imgElement, basePath, extensions) {
+        if (!extensions || extensions.length === 0) return;
+        const nextExt = extensions.shift();
+        imgElement.onerror = function() {
+            tryAlternativeFormats(imgElement, basePath, extensions);
+        };
+        imgElement.src = `${basePath}.${nextExt}`;
+    }
+
+    // Dynamic Multi-Image Loader & Seamless Infinite Left Slider
+    document.addEventListener("DOMContentLoaded", function () {
+        const track = document.getElementById("heroSliderTrack");
+        if (!track) return;
+
+        // Auto Discover Extra Images (img3, img4, img5, etc.)
+        const maxCheck = 20;
+        for (let i = 3; i <= maxCheck; i++) {
+            const imgPath = `/static/header/img${i}.jpg`;
+            const tempImg = new Image();
+            tempImg.src = imgPath;
+            tempImg.onload = function() {
+                const slideDiv = document.createElement("div");
+                slideDiv.className = "hero-slide-item";
+                const imgTag = document.createElement("img");
+                imgTag.src = imgPath;
+                imgTag.alt = `Hero Slide ${i}`;
+                imgTag.onerror = function() {
+                    tryAlternativeFormats(this, `/static/header/img${i}`, ['png', 'jpeg', 'webp']);
+                };
+                slideDiv.appendChild(imgTag);
+                track.appendChild(slideDiv);
+            };
+        }
+
+        // Infinite Left Slide Logic (Every 3 Seconds)
+        setInterval(() => {
+            const slideItems = track.children;
+            if (slideItems.length > 1) {
+                track.style.transition = "transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)";
+                track.style.transform = "translateX(-100%)";
+
+                setTimeout(() => {
+                    track.style.transition = "none";
+                    const firstChild = track.firstElementChild;
+                    track.appendChild(firstChild);
+                    track.style.transform = "translateX(0)";
+                }, 800);
+            }
+        }, 3000);
+    });
+</script>
