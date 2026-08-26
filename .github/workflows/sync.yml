@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: true
@@ -18,5 +18,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add hf https://ehsankhan5390:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/ehsankhan5390/Web_Cresent_Online_Academy
+          git config --global user.email "ehsankhan5390@gmail.com"
+          git config --global user.name "ehsankhan5390"
+          git remote add hf https://ehsankhan5390:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/ehsankhan5390/Web_Cresent_Online_Academy || git remote set-url hf https://ehsankhan5390:${{ secrets.HF_TOKEN }}@huggingface.co/spaces/ehsankhan5390/Web_Cresent_Online_Academy
           git push --force hf main
