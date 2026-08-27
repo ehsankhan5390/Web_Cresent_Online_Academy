@@ -1,24 +1,193 @@
 <footer class="footer">
     <div class="container footer-content">
-        <div class="footer-info">
-            <h3>Crescent Online Academy</h3>
-            <p>Providing World-Class Academic & School Education Globally (USA, UK, Europe, Canada, Australia).</p>
+        
+        <!-- Column 1: Left Positioned -->
+        <div class="footer-col footer-info">
+            <h3 class="footer-heading">Crescent Online Academy</h3>
+            <p class="footer-desc">Providing World-Class Academic & School Education Globally (USA, UK, Europe, Canada, Australia).</p>
         </div>
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#academic-section">International Courses</a></li>
-                <li><a href="https://aljannatacademy.com" target="_blank">Islamic Portal (Al-Jannat)</a></li>
-            </ul>
+
+        <!-- Column 2: Center Positioned Block -->
+        <div class="footer-col footer-links">
+            <div class="inner-block">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul>
+                    <li><a href="#academic-section">Academic Education</a></li>
+                    <li><a href="https://aljannatacademy.com" target="_blank">Islamic Education</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-contact">
-            <h4>Get In Touch</h4>
-            <p>Email: info@crescentonlineacademy.com</p>
-            <p>Global Online Tutoring Services</p>
+
+        <!-- Column 3: Right Positioned Block -->
+        <div class="footer-col footer-contact">
+            <div class="inner-block">
+                <h4 class="footer-heading">Get In Touch</h4>
+                
+                <!-- Email -->
+                <p class="contact-item">
+                    <span class="contact-icon">✉️</span> 
+                    <a href="mailto:info@crescentonlineacademy.com">info@crescentonlineacademy.com</a>
+                </p>
+                
+                <!-- Call -->
+                <p class="contact-item">
+                    <span class="contact-icon">📞</span> 
+                    <a href="tel:+14254480387">+1 (425) 448-0387</a>
+                </p>
+                
+                <!-- Official WhatsApp Vector Logo -->
+                <p class="contact-item">
+                    <svg class="wa-official-logo" viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="#25D366" d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001L2 22l5.129-1.334c1.464.798 3.116 1.218 4.88 1.219h.004c5.506 0 9.99-4.478 9.99-9.985A9.92 9.92 0 0 0 19.07 4.93 9.92 9.92 0 0 0 12.012 2zm0 18.293h-.003c-1.492 0-2.956-.4-4.234-1.158l-.304-.181-3.146.818.84-3.056-.201-.318a8.28 8.28 0 0 1-1.272-4.414c0-4.566 3.715-8.282 8.284-8.282 2.21 0 4.288.861 5.85 2.424 1.563 1.563 2.423 3.64 2.422 5.852 0 4.568-3.716 8.283-8.286 8.283zm4.542-6.205c-.249-.125-1.474-.727-1.703-.81-.229-.083-.396-.125-.562.125-.166.249-.645.81-.79 1.018-.145.207-.291.228-.54.104-.249-.125-1.052-.388-2.004-1.237-.741-.661-1.241-1.477-1.387-1.726-.145-.249-.015-.384.109-.507.112-.111.249-.291.374-.436.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436-.062-.125-.562-1.352-.77-1.849-.202-.486-.408-.42-.562-.428l-.478-.009c-.166 0-.436.062-.664.311s-.873.852-.873 2.078c0 1.226.893 2.41 1.018 2.576.125.166 1.758 2.684 4.259 3.763.595.257 1.06.41 1.423.525.597.19 1.14.163 1.57.099.479-.071 1.474-.602 1.682-1.184.208-.582.208-1.08.145-1.184-.063-.104-.229-.166-.478-.291z"/>
+                    </svg>
+                    <a href="https://wa.me/14254480387" target="_blank">+1 (425) 448-0387</a>
+                </p>
+            </div>
         </div>
+
     </div>
+
+    <!-- Bottom Copyright -->
     <div class="footer-bottom">
         <p>&copy; 2026 Crescent Online Academy. All Rights Reserved.</p>
     </div>
 </footer>
+
+<style>
+    /* Fixed Container Positioning */
+    .footer {
+        background-color: #0f172a;
+        color: #94a3b8;
+        padding: 35px 0 15px 0;
+        font-family: 'Poppins', sans-serif;
+        border-top: 3px solid #10b981;
+        width: 100%;
+    }
+
+    .footer-content {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    /* Keep Internal Text Naturally Left Aligned inside all blocks */
+    .footer-col {
+        flex: 1;
+        text-align: left;
+    }
+
+    .footer-info {
+        max-width: 380px;
+    }
+
+    /* Move Quick Links Block to Center */
+    .footer-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Move Contact Block to Right */
+    .footer-contact {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .inner-block {
+        text-align: left;
+    }
+
+    /* Headings Styling */
+    .footer-heading {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0 0 14px 0;
+        padding-bottom: 5px;
+        line-height: 1.2;
+        border-bottom: 2px solid #38bdf8;
+        display: inline-block;
+    }
+
+    .footer-desc {
+        line-height: 1.5;
+        font-size: 13.5px;
+        margin: 0;
+        color: #94a3b8;
+    }
+
+    /* Quick Links Clean List */
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-size: 13.5px;
+        font-weight: 500;
+    }
+
+    .footer-links ul li a:hover {
+        color: #38bdf8;
+    }
+
+    /* Contact Items Clean Layout */
+    .contact-item {
+        font-size: 13.5px;
+        margin: 0 0 10px 0;
+        color: #cbd5e1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .contact-icon {
+        font-size: 16px;
+    }
+
+    .wa-official-logo {
+        flex-shrink: 0;
+    }
+
+    .contact-item a {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .contact-item a:hover {
+        color: #fbbf24;
+        text-decoration: underline;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 25px;
+        padding-top: 15px;
+        font-size: 12.5px;
+        color: #64748b;
+    }
+
+    @media (max-width: 850px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 25px;
+        }
+        .footer-links, .footer-contact {
+            justify-content: flex-start;
+        }
+    }
+</style>

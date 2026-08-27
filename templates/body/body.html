@@ -1,0 +1,233 @@
+<!-- Body / Course Selection Section -->
+<section class="main-body-container">
+    <div class="body-wrapper">
+
+        <!-- Left Portion: Academic Education -->
+        <div class="education-card academic-card">
+            <div class="diamond-shape">
+                <div class="diamond-content">
+                    
+                    <!-- True Pentagon Icon Container -->
+                    <div class="pentagon-wrapper">
+                        <svg class="pentagon-svg" viewBox="0 0 100 100">
+                            <polygon points="50,5 95,38 78,95 22,95 5,38" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="3" />
+                        </svg>
+                        <span class="card-icon">📚</span>
+                    </div>
+
+                    <h2 class="card-title">ACADEMIC EDUCATION</h2>
+                    <p class="card-description">Comprehensive Tuition & Modern Curriculum Support for All Grades</p>
+                    <a href="/academic" class="explore-btn academic-btn">Explore Academic Courses</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Portion: Islamic Education -->
+        <div class="education-card islamic-card">
+            <div class="diamond-shape">
+                <div class="diamond-content">
+                    
+                    <!-- True Pentagon Icon Container -->
+                    <div class="pentagon-wrapper">
+                        <svg class="pentagon-svg" viewBox="0 0 100 100">
+                            <polygon points="50,5 95,38 78,95 22,95 5,38" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="3" />
+                        </svg>
+                        <span class="card-icon">🕌</span>
+                    </div>
+
+                    <h2 class="card-title">ISLAMIC EDUCATION</h2>
+                    <p class="card-description">Quran Recitation, Tajweed, Hifz & Essential Islamic Studies</p>
+                    <!-- Redirects to Al Jannat Academy -->
+                    <a href="https://aljannatacademy.com/" target="_blank" rel="noopener noreferrer" class="explore-btn islamic-btn">Explore Islamic Studies</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Google Fonts Import */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@500;600;700&display=swap');
+
+    /* Pure White Background for Body */
+    .main-body-container {
+        width: 100%;
+        min-height: calc(100vh - 450px);
+        background: #ffffff; 
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .body-wrapper {
+        max-width: 1300px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .education-card {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Diamond Main Box Layout */
+    .diamond-shape {
+        width: 100%;
+        min-height: 420px;
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 20px;
+        clip-path: polygon(5% 0%, 95% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 30px;
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .academic-card .diamond-shape:hover {
+        transform: translateY(-8px);
+        border-color: #1d4ed8;
+        box-shadow: 0 15px 35px rgba(29, 78, 216, 0.15);
+        background: #ffffff;
+    }
+
+    .islamic-card .diamond-shape:hover {
+        transform: translateY(-8px);
+        border-color: #047857;
+        box-shadow: 0 15px 35px rgba(4, 120, 87, 0.15);
+        background: #ffffff;
+    }
+
+    .diamond-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    /* True Pentagon SVG Container Setup */
+    .pentagon-wrapper {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .pentagon-svg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition: transform 0.3s ease;
+    }
+
+    .diamond-shape:hover .pentagon-svg {
+        transform: scale(1.08);
+    }
+
+    .card-icon {
+        position: relative;
+        z-index: 2;
+        font-size: 42px;
+    }
+
+    .card-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .academic-card .card-title {
+        color: #1e3a8a;
+    }
+
+    .islamic-card .card-title {
+        color: #064e3b;
+    }
+
+    .card-description {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        color: #475569;
+        margin: 0;
+        line-height: 1.6;
+        max-width: 85%;
+    }
+
+    /* Solid Colorful Buttons Styling */
+    .explore-btn {
+        margin-top: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        padding: 14px 32px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #ffffff !important;
+    }
+
+    /* Deep Royal Blue Solid Button for Academic */
+    .academic-btn {
+        background-color: #1d4ed8;
+        box-shadow: 0 4px 15px rgba(29, 78, 216, 0.35);
+    }
+
+    .academic-btn:hover {
+        background-color: #1e40af;
+        box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+        transform: translateY(-2px);
+    }
+
+    /* Deep Emerald Green Solid Button for Islamic */
+    .islamic-btn {
+        background-color: #047857;
+        box-shadow: 0 4px 15px rgba(4, 120, 87, 0.35);
+    }
+
+    .islamic-btn:hover {
+        background-color: #065f46;
+        box-shadow: 0 6px 20px rgba(6, 95, 70, 0.5);
+        transform: translateY(-2px);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 900px) {
+        .body-wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+        .diamond-shape {
+            min-height: 320px;
+            clip-path: none;
+            border-radius: 15px;
+        }
+        .card-title {
+            font-size: 22px;
+        }
+    }
+</style>

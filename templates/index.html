@@ -11,12 +11,55 @@
     <!-- Header Single Include -->
     {% include 'includes/header.html' %}
 
-    <!-- Main Content Area -->
+    <!-- Main Content Area Dynamic Switch -->
     <main class="main-body">
+        {% if page == 'academic' %}
+            {% include 'body/academic/academic academic.html' %}
+        {% else %}
+            {% include 'body/body.html' %}
+        {% endif %}
     </main>
 
     <!-- Footer Single Include -->
     {% include 'includes/footer.html' %}
+
+    <!-- Gentle Snowfall Effect -->
+    <style>
+        .snowflake {
+            position: fixed;
+            top: -10vh;
+            color: #bae6fd;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            font-family: Arial, sans-serif;
+            user-select: none;
+            z-index: 9999;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+    <script>
+        function createSnowflake() {
+            const snow = document.createElement('div');
+            snow.innerHTML = '❄';
+            snow.classList.add('snowflake');
+            
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.animationDuration = Math.random() * 4 + 5 + 's';
+            snow.style.opacity = Math.random() * 0.6 + 0.4;
+            snow.style.fontSize = Math.random() * 12 + 10 + 'px';
+            
+            document.body.appendChild(snow);
+            
+            setTimeout(() => { snow.remove(); }, 9000);
+        }
+        
+        setInterval(createSnowflake, 250);
+    </script>
 
 </body>
 </html>

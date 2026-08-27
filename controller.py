@@ -44,9 +44,25 @@ async def home(request: Request):
         request=request, 
         name="index.html",
         context={
+            "page": "home",
             "courses": courses,
             "seo_title": "Crescent Online Academy - Learn Quran & Islamic Studies",
             "seo_desc": "Online Quran Classes with Tajweed for kids and adults worldwide."
+        }
+    )
+
+# 📚 اکیڈمک ایجوکیشن پیج راؤٹ (نیا شامل کیا گیا ہے)
+@app.get("/academic", response_class=HTMLResponse)
+async def academic(request: Request):
+    courses = get_dynamic_courses()
+    return templates.TemplateResponse(
+        request=request, 
+        name="index.html",
+        context={
+            "page": "academic",
+            "courses": courses,
+            "seo_title": "Academic Education - Crescent Online Academy",
+            "seo_desc": "Comprehensive Tuition & Modern Curriculum Support for All Grades."
         }
     )
 
