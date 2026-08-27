@@ -1,7 +1,7 @@
 <!-- Google Fonts Import for Premium Branding & Top Bar Typography -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Outfit:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Outfit:wght@500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <header class="site-header">
     
@@ -32,18 +32,20 @@
         <!-- Branding Content ON TOP of the Sliding Images -->
         <div class="header-container hero-branding-overlay">
             
-            <div class="logo-text-wrapper">
-                <!-- Large Logo Image -->
-                <div class="logo-box">
-                    <img id="siteLogo" src="/static/header/header/logo.png" alt="Crescent Online Academy" class="hero-logo-large" onerror="tryAlternativeFormats(this, '/static/header/header/logo', ['jpg', 'jpeg', 'webp']);">
+            <a href="/" style="text-decoration: none; color: inherit; display: inline-block;">
+                <div class="logo-text-wrapper" style="cursor: pointer;">
+                    <!-- Large Logo Image -->
+                    <div class="logo-box">
+                        <img id="siteLogo" src="/static/header/header/logo.png" alt="Crescent Online Academy" class="hero-logo-large" onerror="tryAlternativeFormats(this, '/static/header/header/logo', ['jpg', 'jpeg', 'webp']);">
+                    </div>
+                    
+                    <!-- Premium Typography Branding Text -->
+                    <div class="hero-brand-text">
+                        <h1 class="hero-main-title">CRESCENT ONLINE ACADEMY</h1>
+                        <p class="hero-subtitle">Educating with Integrity & Academic Excellence Worldwide</p>
+                    </div>
                 </div>
-                
-                <!-- Premium Typography Branding Text -->
-                <div class="hero-brand-text">
-                    <h1 class="hero-main-title">CRESCENT ONLINE ACADEMY</h1>
-                    <p class="hero-subtitle">Educating with Integrity & Academic Excellence Worldwide</p>
-                </div>
-            </div>
+            </a>
 
         </div>
 
@@ -73,7 +75,7 @@
     .top-tagline-bar {
         background: #0f172a;
         color: #ffffff;
-        padding: 9px 0;
+        padding: 11px 0;
         position: relative;
         z-index: 20;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -90,27 +92,29 @@
         font-family: 'Cinzel', serif;
         color: #fbbf24;
         font-weight: 700;
-        font-size: 13.5px;
+        font-size: 16px;
         letter-spacing: 0.6px;
         text-shadow: 0 1px 3px rgba(0,0,0,0.5);
     }
 
+    /* Elegantly Stylized Premium Tagline Font */
     .tagline-text {
-        font-family: 'Outfit', sans-serif;
-        color: #f1f5f9;
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
+        font-family: 'Inter', 'Poppins', sans-serif;
+        color: #fef08a;
+        font-weight: 500;
+        font-size: 14.5px;
+        letter-spacing: 0.5px;
+        text-transform: none;
+        opacity: 0.95;
     }
 
-    /* Hero Banner Slider Container (~410px Height) */
+    /* Hero Banner Slider Container (Increased Height by 20% to ~492px) */
     .hero-slider-container {
         position: relative;
         width: 100%;
-        height: 410px;
+        height: 492px;
         overflow: hidden;
-        border-bottom: 4px solid var(--brand-green);
+        border-bottom: 5px solid var(--brand-green);
     }
 
     .hero-slider-track {
@@ -159,11 +163,12 @@
     .logo-text-wrapper {
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 30px;
     }
 
+    /* Logo Image (+20% Size) */
     .hero-logo-large {
-        height: 175px;
+        height: 210px;
         width: auto;
         object-fit: contain;
         filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
@@ -174,9 +179,10 @@
         flex-direction: column;
     }
 
+    /* Main Title (+20% Size) */
     .hero-main-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: 46px;
+        font-size: 55px;
         font-weight: 900;
         margin: 0;
         line-height: 1.1;
@@ -187,33 +193,34 @@
         -webkit-text-fill-color: transparent;
     }
 
+    /* Subtitle (+20% Size) */
     .hero-subtitle {
         font-family: 'Playfair Display', serif;
-        font-size: 22px;
+        font-size: 26.5px;
         font-style: italic;
         color: var(--brand-gold);
-        margin: 8px 0 0 0;
+        margin: 10px 0 0 0;
         text-shadow: 0 2px 8px rgba(0,0,0,0.8);
     }
 
     @media (max-width: 900px) {
         .hero-slider-container {
-            height: 280px;
+            height: 336px;
         }
         .hero-main-title {
-            font-size: 30px;
+            font-size: 36px;
         }
         .hero-logo-large {
-            height: 110px;
+            height: 132px;
         }
         .hero-subtitle {
-            font-size: 16px;
+            font-size: 19px;
         }
         .tagline-text {
-            font-size: 11px;
+            font-size: 12.5px;
         }
         .trust-badge {
-            font-size: 11.5px;
+            font-size: 13.5px;
         }
     }
 </style>
