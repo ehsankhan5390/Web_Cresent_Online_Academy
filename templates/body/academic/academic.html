@@ -1,244 +1,111 @@
-<!-- Academic Education Section -->
-<section class="academic-container">
-    <div class="academic-wrapper">
-        
-        <!-- Header / Intro Banner -->
-        <div class="academic-header">
-            <span class="section-badge">📚 International Academic Portal</span>
-            <h1 class="main-heading">Academic Education & Global Tuition</h1>
-            <p class="section-subtext">
-                Providing high-quality, interactive online tutoring for primary, secondary, and higher secondary students across the USA, UK, Canada, Australia, and Europe.
-            </p>
-        </div>
+<!-- Academic Education Content Only (No Extra Header/Footer) -->
+<div class="academic-container">
+    <div class="academic-header">
+        <h1 class="academic-title">ACADEMIC EDUCATION</h1>
+        <p class="academic-subtitle">Comprehensive Tuition & Modern Curriculum Support for All Grades</p>
+    </div>
 
-        <!-- Grade Levels Grid -->
-        <div class="grades-grid">
-            
-            <!-- Grade 1-5 -->
-            <div class="grade-card">
-                <div class="card-icon-box">✏️</div>
+    <div class="academic-details-grid">
+        <a href="/academic/primary" class="academic-card-link">
+            <div class="academic-card">
                 <h3>Primary Education</h3>
                 <span class="grade-tag">Grades 1 - 5</span>
-                <p>Building strong foundations in Primary Mathematics, English Reading & Writing, Basic Science, and Social Studies.</p>
-                <ul class="subjects-list">
-                    <li>Basic Mathematics</li>
-                    <li>English Literacy</li>
-                    <li>General Science</li>
-                </ul>
+                <p>Mathematics, English Literacy, Science, and Social Studies foundation.</p>
+                <span class="view-btn">View Program Details →</span>
             </div>
+        </a>
 
-            <!-- Grade 6-8 -->
-            <div class="grade-card highlighted-card">
-                <div class="card-icon-box">🔬</div>
+        <a href="/academic/middle" class="academic-card-link">
+            <div class="academic-card">
                 <h3>Middle School</h3>
                 <span class="grade-tag">Grades 6 - 8</span>
-                <p>Conceptual learning in Algebra, Physics, Chemistry, Biology, and Advanced Language Arts to prepare for high school.</p>
-                <ul class="subjects-list">
-                    <li>Pre-Algebra & Geometry</li>
-                    <li>Integrated Physics & Chem</li>
-                    <li>English Grammar & Essay</li>
-                </ul>
+                <p>Algebra, Integrated Science (Physics, Chemistry, Biology), and English Grammar.</p>
+                <span class="view-btn">View Program Details →</span>
             </div>
+        </a>
 
-            <!-- Grade 9-12 / IGCSE / O/A Levels -->
-            <div class="grade-card">
-                <div class="card-icon-box">🎓</div>
+        <a href="/academic/high_school" class="academic-card-link">
+            <div class="academic-card">
                 <h3>High School & Board Exams</h3>
                 <span class="grade-tag">Grades 9 - 12 / O & A Levels</span>
-                <p>Specialized subject tutoring for Board Exams, IGCSE, SAT prep, AP courses, Calculus, and Advanced Sciences.</p>
-                <ul class="subjects-list">
-                    <li>Advanced Physics & Math</li>
-                    <li>Chemistry & Biology</li>
-                    <li>Exam Preparation & Revision</li>
-                </ul>
+                <p>Advanced Physics, Chemistry, Calculus, Biology, and Board Exam Prep.</p>
+                <span class="view-btn">View Program Details →</span>
             </div>
-
-        </div>
-
-        <!-- Action Banner -->
-        <div class="academic-cta">
-            <h3>Ready to Boost Your Academic Performance?</h3>
-            <p>Book a Free Demo Class with our expert international tutors today.</p>
-            <a href="https://wa.me/14254480387" target="_blank" class="cta-whatsapp-btn">
-                💬 Get Free Demo Class via WhatsApp
-            </a>
-        </div>
-
+        </a>
     </div>
-</section>
+</div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap');
-
     .academic-container {
-        width: 100%;
-        min-height: calc(100vh - 400px);
-        background: #ffffff;
-        padding: 50px 20px;
-        box-sizing: border-box;
-    }
-
-    .academic-wrapper {
-        max-width: 1250px;
+        max-width: 1200px;
         margin: 0 auto;
+        padding: 40px 20px;
+        font-family: 'Poppins', sans-serif;
     }
-
     .academic-header {
         text-align: center;
-        max-width: 800px;
-        margin: 0 auto 50px auto;
+        margin-bottom: 40px;
     }
-
-    .section-badge {
-        background: #e0f2fe;
-        color: #0284c7;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-        padding: 6px 16px;
-        border-radius: 20px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .main-heading {
+    .academic-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 800;
-        color: #0f172a;
-        margin: 15px 0 10px 0;
+        color: #1e3a8a;
     }
-
-    .section-subtext {
-        font-family: 'Poppins', sans-serif;
-        font-size: 15px;
-        color: #64748b;
-        line-height: 1.6;
+    .academic-subtitle {
+        color: #475569;
+        font-size: 16px;
     }
-
-    /* Cards Grid */
-    .grades-grid {
+    .academic-details-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        margin-bottom: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
     }
-
-    .grade-card {
+    .academic-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    .academic-card {
         background: #f8fafc;
         border: 2px solid #e2e8f0;
-        border-radius: 16px;
-        padding: 35px 25px;
-        transition: all 0.3s ease;
+        border-radius: 12px;
+        padding: 25px;
+        height: 100%;
+        box-sizing: border-box;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
     }
-
-    .grade-card:hover {
+    .academic-card:hover {
         transform: translateY(-5px);
-        border-color: #0284c7;
-        box-shadow: 0 12px 25px rgba(2, 132, 199, 0.12);
-        background: #ffffff;
+        border-color: #1d4ed8;
+        box-shadow: 0 10px 20px rgba(29, 78, 216, 0.08);
     }
-
-    .highlighted-card {
-        border-color: #38bdf8;
-        background: #faf5ff;
-    }
-
-    .card-icon-box {
-        font-size: 40px;
-        margin-bottom: 15px;
-    }
-
-    .grade-card h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #1e293b;
+    .academic-card h3 {
         margin: 0 0 5px 0;
+        color: #0f172a;
     }
-
     .grade-tag {
         display: inline-block;
-        font-family: 'Poppins', sans-serif;
+        background: #1d4ed8;
+        color: white;
         font-size: 12px;
-        font-weight: 600;
-        color: #0284c7;
-        background: #f0f9ff;
         padding: 3px 10px;
-        border-radius: 6px;
-        margin-bottom: 15px;
+        border-radius: 12px;
+        margin: 10px 0;
+        align-self: flex-start;
     }
-
-    .grade-card p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
+    .academic-card p {
         color: #475569;
+        font-size: 14px;
         line-height: 1.5;
-        margin-bottom: 20px;
+        flex-grow: 1;
     }
-
-    .subjects-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        border-top: 1px solid #e2e8f0;
-        padding-top: 15px;
-    }
-
-    .subjects-list li {
-        font-family: 'Poppins', sans-serif;
-        font-size: 13px;
-        color: #334155;
-        margin-bottom: 8px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .subjects-list li::before {
-        content: "✓";
-        color: #10b981;
-        font-weight: bold;
-    }
-
-    /* CTA Banner */
-    .academic-cta {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        border-radius: 20px;
-        padding: 40px 20px;
-        text-align: center;
-        color: #ffffff;
-    }
-
-    .academic-cta h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 26px;
-        margin: 0 0 10px 0;
-    }
-
-    .academic-cta p {
-        font-family: 'Poppins', sans-serif;
-        font-size: 15px;
-        color: #94a3b8;
-        margin: 0 0 25px 0;
-    }
-
-    .cta-whatsapp-btn {
-        display: inline-block;
-        background: #25d366;
-        color: #ffffff;
-        font-family: 'Poppins', sans-serif;
+    .view-btn {
+        margin-top: 15px;
+        color: #1d4ed8;
         font-weight: 600;
-        font-size: 15px;
-        padding: 12px 28px;
-        border-radius: 30px;
-        text-decoration: none;
-        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-        transition: all 0.3s ease;
-    }
-
-    .cta-whatsapp-btn:hover {
-        background: #1eb854;
-        transform: translateY(-2px);
+        font-size: 13.5px;
     }
 </style>

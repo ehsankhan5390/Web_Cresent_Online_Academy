@@ -51,7 +51,7 @@ async def home(request: Request):
         }
     )
 
-# 📚 اکیڈمک ایجوکیشن پیج راؤٹ (نیا شامل کیا گیا ہے)
+# 📚 اکیڈمک ایجوکیشن پیج راؤٹ
 @app.get("/academic", response_class=HTMLResponse)
 async def academic(request: Request):
     courses = get_dynamic_courses()
@@ -63,6 +63,51 @@ async def academic(request: Request):
             "courses": courses,
             "seo_title": "Academic Education - Crescent Online Academy",
             "seo_desc": "Comprehensive Tuition & Modern Curriculum Support for All Grades."
+        }
+    )
+
+# 🎈 پرائمری ایجوکیشن پیج راؤٹ (Grades 1-5)
+@app.get("/academic/primary", response_class=HTMLResponse)
+async def academic_primary(request: Request):
+    courses = get_dynamic_courses()
+    return templates.TemplateResponse(
+        request=request, 
+        name="index.html",
+        context={
+            "page": "academic_primary",
+            "courses": courses,
+            "seo_title": "Primary Education (Grades 1-5) - Crescent Online Academy",
+            "seo_desc": "Interactive 1-on-1 Online Learning for Grades 1 to 5."
+        }
+    )
+
+# 📘 مڈل سکول پیج راؤٹ (Grades 6-8)
+@app.get("/academic/middle", response_class=HTMLResponse)
+async def academic_middle(request: Request):
+    courses = get_dynamic_courses()
+    return templates.TemplateResponse(
+        request=request, 
+        name="index.html",
+        context={
+            "page": "academic_middle",
+            "courses": courses,
+            "seo_title": "Middle School (Grades 6-8) - Crescent Online Academy",
+            "seo_desc": "Comprehensive 1-on-1 Academic Support for Grades 6 to 8."
+        }
+    )
+
+# 🎓 ہائی سکول و بورڈ ایگزام پیج راؤٹ (Grades 9-12 / O & A Levels)
+@app.get("/academic/high_school", response_class=HTMLResponse)
+async def academic_high_school(request: Request):
+    courses = get_dynamic_courses()
+    return templates.TemplateResponse(
+        request=request, 
+        name="index.html",
+        context={
+            "page": "academic_high_school",
+            "courses": courses,
+            "seo_title": "High School & Board Exams - Crescent Online Academy",
+            "seo_desc": "Advanced Prep for Grades 9-12, O & A Levels & Board Exams."
         }
     )
 

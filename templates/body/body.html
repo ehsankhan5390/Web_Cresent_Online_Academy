@@ -79,14 +79,13 @@
         padding: 10px;
     }
 
-    /* Diamond Main Box Layout */
+    /* Card Main Layout */
     .diamond-shape {
         width: 100%;
         min-height: 420px;
         background: #f8fafc;
         border: 2px solid #e2e8f0;
         border-radius: 20px;
-        clip-path: polygon(5% 0%, 95% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -151,9 +150,9 @@
 
     .card-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 800;
-        letter-spacing: 1.2px;
+        letter-spacing: 1px;
         margin: 0;
         text-transform: uppercase;
     }
@@ -172,7 +171,7 @@
         color: #475569;
         margin: 0;
         line-height: 1.6;
-        max-width: 85%;
+        max-width: 90%;
     }
 
     /* Solid Colorful Buttons Styling */
@@ -189,6 +188,8 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
         color: #ffffff !important;
+        cursor: pointer;
+        z-index: 10;
     }
 
     /* Deep Royal Blue Solid Button for Academic */
@@ -223,7 +224,6 @@
         }
         .diamond-shape {
             min-height: 320px;
-            clip-path: none;
             border-radius: 15px;
         }
         .card-title {

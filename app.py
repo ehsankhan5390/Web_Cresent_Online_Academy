@@ -1,13 +1,18 @@
 import gradio as gr
 from controller import app as fastapi_app
-import spaces
 
-# ZeroGPU Function
-@spaces.GPU
-def gpu_keepalive(text="init"):
-    return f"GPU Active: {text}"
+# ZeroGPU کو سیف طریقے سے ہینڈل کرنا (Local PC اور Hugging Face دونوں کے لیے)
+try:
+    import spaces
+    @spaces.GPU
+    def gpu_keepalive(text="init"):
+        return f"GPU Active: {text}"
+except ImportError:
+    # اگر local pc پر spaces نہ ملے تو یہ سمپل فنکشن چلے گا
+    def gpu_keepalive(text="init"):
+        return f"Local Mode Active: {text}"
 
-# Startup پر اس فنکشن کو فوراً کال کریں تاکہ ZeroGPU اسے پکڑ لے
+# Startup check
 try:
     gpu_keepalive("startup_check")
 except Exception:
