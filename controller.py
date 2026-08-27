@@ -2,12 +2,21 @@ import os
 import sys
 import json
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
 
 app = FastAPI()
+
+# 🌐 www ڈومین کو مین ڈومین پر خودکار ری ڈائریکٹ کرنے کا مڈل ویئر
+@app.middleware("http")
+async def redirect_www(request: Request, call_next):
+    host = request.headers.get("host", "")
+    if host.startswith("www."):
+        new_url = str(request.url).replace("//www.", "//", 1)
+        return RedirectResponse(url=new_url, status_code=301)
+    return await call_next(request)
 
 # 📂 Static ڈائریکٹری
 os.makedirs("static", exist_ok=True)
